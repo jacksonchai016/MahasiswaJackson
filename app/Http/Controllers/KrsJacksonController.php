@@ -16,7 +16,8 @@ class KrsJacksonController extends Controller
     public function index()
     {
         //
-        $mahasiswa = Student::all();
+        // $mahasiswa = Student::all();
+        $mahasiswa = DB::table('krs_mahasiswa')->get();
         return view('mahasiswa.krs',['mahasiswa' => $mahasiswa]);
 
     }
